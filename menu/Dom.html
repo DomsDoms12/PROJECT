@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>complete responsive personal portfolio website desgin</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="../css/dom.css">
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+
+    <div class="user">
+        <img src="../image/dom.jpg" alt="pics" id="responsive">
+        <h3>DOMINADOR M. ORPIANO</h3>
+        <p>OFFICE STAFF</p>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close">&times</span> 
+        <!--for resizing reponsive--> 
+        <img class="modal-content" id="img01"/>
+        <!--nested div po to| div tas   div -->
+        <div id="caption"></div>
+        </div> 
+       
+     <!--good practice script tabi ng closing body -->
+     <!--Get the modal-- the one that pop  up to the screen | para siyang extra form na nagpopop-up -->
+        <script>
+            //step 1 : get the modal
+            var modal = document.getElementById("myModal");
+            //step 2: get the image and insert it inside the modal. use the alt text as a caption
+    
+            var img = document.getElementById("responsive");
+            var modalimg =  document.getElementById("img01");
+            var captionText = document.getElementById("img01");
+        
+            //initilize the var img
+    
+            img.onclick = function()
+        { 
+            modal.style.display = "block";
+            modalimg.src=this.src;
+            captionText.innerHTML = this.alt;
+        }
+    
+    
+        //step3 : get the <span > element thAT CLOSES THE MODal
+        
+            var span = document.getElementsByClassName("close")[0];
+    
+    
+         //step4: whe the user the click on the span (x) close the modal..
+    
+            span.onclick = function()
+            {
+                modal.style.display = "none";
+            }
+        </script>
+    
+
+
+
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#services">services</a>
+        <a href="#portfolio">portfolio</a>
+        <a href="#contact">contact</a>
+    </nav>
+
+</header>
+
+<!-- header section ends -->
+
+<div id="menu-btn" class="fas fa-bars"></div>
+
+<!-- theme toggler  -->
+
+<div id="theme-toggler" class="fas fa-moon"></div>
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>DOM ORPIANO</h3>
+        <p>OFFICE STAFF AT BLUE BOARD MEDIA AT TABUK CITY, KALINGA</p>
+        <a href="#" class="btn">download CV</a>
+    </div>
+
+    <div class="share">
+        <a href="https://www.facebook.com/dom.orpiano/" class="fab fa-facebook-f"></a>
+        <a href="https://twitter.com/home" class="fab fa-twitter"></a>
+        <a href="https://www.instagram.com/" class="fab fa-instagram"></a>
+        <a href="https://github.com/" class="fab fa-github"></a>
+    
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+
+
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+<section class="about" id="about">
+
+    <h1 class="heading"> <span>about</span> me </h1>
+
+    <div class="row">
+
+        <div class="box-container">
+            <div class="box">
+                <h3>6+</h3>
+                <p>Job Position Attained</p>
+            </div>
+            <div class="box">
+                <h3>450+</h3>
+                <p>Working </p>
+            </div>
+            <div class="box">
+                <h3>190+</h3>
+                <p>working hours</p>
+            </div>
+            <div class="box">
+                <h3>10+</h3>
+                <p>certificate</p>
+            </div>
+        </div>
+
+        <div class="content">
+            <h3>my name is <span>Dom Orpiano</span></h3>
+            <p>23 years age and currently working at BLUE BOARD MEDIA as office staff. </p>
+            <a href="#" class="btn">contact me</a>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="progress">
+            <h3> video editing using after effects<span>70%</span> </h3>
+            <div class="bar bar-1-1"><span></span></div>
+            <h3> graphic design photoshop <span>75%</span> </h3>
+            <div class="bar bar-1-2"><span></span></div>
+            <h3> techinical hardware <span>75%</span> </h3>
+            <div class="bar bar-1-3"><span></span></div>
+        </div>
+
+        <div class="progress">
+            <h3> communication <span>75%</span> </h3>
+            <div class="bar bar-2-1"><span></span></div>
+            <h3> ARCgis Mapper <span>70%</span> </h3>
+            <div class="bar bar-2-2"><span></span></div>
+            <h3> PAPERWOKS <span>65%</span> </h3>
+            <div class="bar bar-2-3"><span></span></div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- services section starts  -->
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+<section class="services" id="services">
+
+    <h1 class="heading"> my <span>services</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-code"></i>
+            <h3>video editing using after effects</h3>
+            <p>I do video intro, extro video effects.</p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-paint-brush"></i>
+            <h3>ARCGIs Map Operator</h3>
+            <p>i have experience also in creating  map template, Google Maps .</p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-mobile"></i>
+            <h3> design photoshop</h3>
+            <p>I also make banner, cartoon and photo manipulation .</p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-bullhorn"></i>
+            <h3>digital marketing</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quas delectus, laboriosam nulla dolore in.</p>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-search-dollar"></i>
+            <h3>I can do a paperwok  and clerrical work also , </h3>
+            <p>.</p>
+        </div>
+
+        <div class="box">
+            <i class="fab fa-wordpress"></i>
+            <h3>Site Support</h3>
+            <p> i been hire as site support in apayao for the implementation  of LTO apayao under DERMALOG.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- services section ends -->
+
+<!-- portfolio section starts  -->
+
+
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+<section class="portfolio" id="portfolio">
+
+    <h1 class="heading"> my <span>portfolio</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <!-- <video  style: width:50 height:50 src="video/file 1.mp4" autoplay controls></video> -->
+            <img src="../image/DOM/ONE.jpg" alt="">
+            <div class="content">
+                <h3>project 01</h3>
+            </div>
+        </div>
+
+        <div class="box">
+            <Img src="../image/DOM/TH.jpg"  ></Img>
+            <div class="content">
+                <h3>project 02</h3>
+            </div>
+        </div>
+
+        <div class="box">
+            <Img src="../image/DOM/two.jpg"  ></Img>
+            <div class="content">
+                <h3>project 03</h3>
+            </div>
+        </div>
+
+        <div class="box">
+            <Img src="../image/DOM/Theree.jpg"  ></Img>
+            <div class="content">
+                <h3>project 04</h3>
+            </div>
+        </div>
+        
+        <div class="box">
+            <Img src="../image/DOM/five.jpg"  ></Img>
+            <div class="content">
+                <h3>project 05</h3>
+            </div>
+        </div>
+        
+
+        <div class="box">
+            <Img src="../image/DOM/SIX.jpg"  ></Img>
+            <div class="content">
+                <h3>project 06</h3>
+            </div>
+        </div>
+
+        <div class="box">
+            <Img src="../image/DOM/seven.jpg"  ></Img>
+            <div class="content">
+                <h3>project 07</h3>
+            </div>
+        </div>
+        
+
+        <div class="box">
+            <Img src="../image/DOM/eight.jpg"  ></Img>
+            <div class="content">
+                <h3>project 08</h3>
+            </div>
+        </div>
+
+        <div class="box">
+            <Img src="../image/DOM/nine.jpg"  ></Img>
+            <div class="content">
+                <h3>project 09</h3>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <Img src="../image/DOM/ten.jpg"  ></Img>
+            <div class="content">
+                <h3>project 10</h3>
+            </div>
+        </div>
+
+
+        <div class="box">
+            <Img src="../image/DOM/eleven.jpg"  ></Img>
+            <div class="content">
+                <h3>project 11</h3>
+            </div>
+        </div>
+        
+
+        <div class="box">
+            <Img src="../image/DOM/four.jpg"  ></Img>
+            <div class="content">
+                <h3>project 12</h3>
+            </div>
+        </div>
+
+        </div>
+    </div>  
+
+</section>
+
+<!-- portfolio section ends -->
+
+<!-- contact section starts -->
+
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+
+<section class="contact" id="contact">
+
+    <h1 class="heading"> <span>contact</span> me </h1>
+
+    <form action="">
+        <input type="text" placeholder="your name" class="box">
+        <input type="email" placeholder="your email" class="box">
+        <input type="text" placeholder="subject" class="box">
+        <textarea name="" class="box" placeholder="your message" id="" cols="30" rows="10"></textarea>
+        
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"> SEND</button>
+        <!-- Modal -->
+
+        <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5 text-center" id="exampleModalLabel">Please confirm</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  Thank you for Commenting fo us. We appreciated it and please continous listen to us.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn2 btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn2 btn-primary">Save</button>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+    </form>
+
+</section>
+
+<!-- contact section ends -->
+
+<div class="credits"> created by <span>DOM ORPIANO</span> | all rights reserved </div>
+
+
+<!--reference to you tube -->
+
+
+
+
+<!-- custom js file link  -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
